@@ -9,8 +9,11 @@ require("dotenv").config();
 const path = require('path');
 const port = process.env.PORT || 5000;
 
-
-app.use(cors());
+app.use(cors(
+    origin: "talky-chat-h3kzufon3-chetan09upadhyay.vercel.app",
+    methods: ["POST","GET"],
+    credentials: true,
+));
 app.use(express.json());
 
 
